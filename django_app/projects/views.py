@@ -43,5 +43,5 @@ def deleteProject(request,pk):
     if request.method == 'POST':
         project.delete()
         return redirect('projects')
-    context = {'object' : project}
+    context = {'object' : project,'title':'Delete Page'}
     return render(request, 'projects/delete_object.html',context)
